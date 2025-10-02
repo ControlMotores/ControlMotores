@@ -15,7 +15,7 @@ def motor_step(rpm_prev, u, K, tau, Ts):
 # Clase de simulación con control de encendido/apagado
 
 class MotorSimulator:
-    def _init_(self, K=100, tau=0.5, Ts=0.05):
+    def __init__(self, K=100, tau=0.5, Ts=0.05):
         self.K = K
         self.tau = tau
         self.Ts = Ts
@@ -80,7 +80,7 @@ def start_gui(sim):
 
 # Main
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     sim = MotorSimulator()
 
     # Ventana de matplotlib
@@ -100,4 +100,4 @@ if _name_ == "_main_":
     try:
         plt.show()
     except KeyboardInterrupt:
-        print("\n⚠ Simulación detenida manualmente.")
+        print("\n⚠️ Simulación detenida manualmente.")
